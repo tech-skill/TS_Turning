@@ -15,8 +15,11 @@ class Settings
 {
 public:
     Settings();
+    ~Settings();
     void GetMachineSettings();
     void GetStockSettings();
+    void SaveMachineSettings();
+    void SaveStockSettings();
 
     struct Stock
     {  // stock
