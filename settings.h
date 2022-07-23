@@ -10,6 +10,7 @@
 
 
 #include <QStringList>
+#include <QSettings>
 
 class Settings
 {
@@ -36,16 +37,16 @@ public:
             "Titanium",             // 8
             "Plastics"              // 9
         };
-        int material= 3;            // default Low carbon steel
-        double stickOut= 100;       // 100mm stickout
-        double diameter= 20;        // 20mm diameter
+        int material=3;             // default Low carbon steel
+        double stickOut=100;        // 100mm stickout
+        double diameter=20;         // 20mm diameter
     } Stock;
 
     struct Machine
     {  //machine
-        double maxZfeed= 4000;
-        double maxXfeed= 3000;
-        double maxSpindleSpeed= 3000;
+        double maxZfeed;
+        double maxXfeed;
+        double maxSpindleSpeed;
         bool constandSurfaceSpeed;
     } Machine;
 

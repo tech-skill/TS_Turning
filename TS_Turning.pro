@@ -19,13 +19,14 @@ test {
             message("CATCH_INCLUDE_DIR is not set, assuming Catch2 can be found automatically in your system")
     }
 
-    TARGET = demo-test
+    TARGET = unit-test
     INCLUDEPATH += $$PWD/include/test
 
     QT += testlib
     SOURCES += \
         test/main.cpp \
-        test/tst_testsuite.cpp
+        test/test_settings.cpp \
+        settings.cpp
 
     HEADERS += \
         test/abc.h \
