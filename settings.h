@@ -1,6 +1,7 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+
 #define ORGANIZATION    "TechSkill"
 #define APPNAME         "TS_Turning"
 
@@ -17,6 +18,7 @@ class Settings
 public:
     Settings();
     ~Settings();
+    static void ClearAllSettings();
     void GetMachineSettings();
     void GetStockSettings();
     void SaveMachineSettings();

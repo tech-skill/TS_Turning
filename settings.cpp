@@ -17,6 +17,12 @@ Settings::~Settings()
     SaveStockSettings();
 }
 
+void Settings::ClearAllSettings()
+{
+    QSettings persistantSettings(ORGANIZATION,APPNAME);
+    persistantSettings.clear();
+}
+
 void Settings::GetMachineSettings()
 {
     QSettings persistantSettings(ORGANIZATION,APPNAME);
@@ -57,8 +63,8 @@ void Settings::SaveStockSettings()
     QSettings persistantSettings(ORGANIZATION,APPNAME);
 
     persistantSettings.beginGroup("Stock");
-        persistantSettings.value("diameter",Stock.diameter);
-        persistantSettings.value("stickOut",Stock.stickOut);
-        persistantSettings.value("material",Stock.material);
+        persistantSettings.setValue("diameter",Stock.diameter);
+        persistantSettings.setValue("stickOut",Stock.stickOut);
+        persistantSettings.setValue("material",Stock.material);
     persistantSettings.endGroup();
 }
