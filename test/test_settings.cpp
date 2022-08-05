@@ -11,7 +11,7 @@ TEST_CASE("default Machine Settings", "[settings]")
     REQUIRE(dut.Machine.constandSurfaceSpeed == true);
 }
 
-<<<<<<< HEAD
+
 TEST_CASE("default Stock Settings", "[settings]")
 {
     Settings dut;
@@ -24,4 +24,5 @@ TEST_CASE("Materials Settings", "[settings]")
 {
     Settings dut;
     REQUIRE(dut.Stock.materials.count() == 10);     // there should be 10 different materials
+
 }
