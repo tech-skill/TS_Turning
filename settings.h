@@ -1,9 +1,12 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
-
 #define ORGANIZATION    "TechSkill"
-#define APPNAME         "TS_Turning"
+#ifdef QT_TESTCASE_BUILDDIR
+    #define APPNAME         "Test_TS_Turning"
+#else
+    #define APPNAME         "TS_Turning"
+#endif
 
 #define MAXXFEED        3000.0
 #define MAXZFEED        4000.0
