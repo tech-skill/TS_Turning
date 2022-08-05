@@ -11,6 +11,7 @@ TEST_CASE("default Machine Settings", "[settings]")
     REQUIRE(dut.Machine.constandSurfaceSpeed == true);
 }
 
+<<<<<<< HEAD
 TEST_CASE("default Stock Settings", "[settings]")
 {
     Settings dut;
