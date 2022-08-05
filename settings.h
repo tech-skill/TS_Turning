@@ -4,9 +4,9 @@
 #define ORGANIZATION    "TechSkill"
 #define APPNAME         "TS_Turning"
 
-#define MAXXFEED        3000
-#define MAXZFEED        4000
-#define MAXSPINDLESPEED 3000
+#define MAXXFEED        3000.0
+#define MAXZFEED        4000.0
+#define MAXSPINDLESPEED 3000.0
 
 
 #include <QStringList>

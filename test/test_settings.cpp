@@ -2,7 +2,7 @@
 #include <QSettings>
 #include "settings.h"
 
-TEST_CASE("default Machine Settings", "[fancy]")
+TEST_CASE("default Machine Settings", "[settings]")
 {
     Settings dut;
     REQUIRE(dut.Machine.maxSpindleSpeed == MAXSPINDLESPEED);
@@ -11,17 +11,16 @@ TEST_CASE("default Machine Settings", "[fancy]")
     REQUIRE(dut.Machine.constandSurfaceSpeed == true);
 }
 
-TEST_CASE("default Stock Settings", "[fancy]")
+TEST_CASE("default Stock Settings", "[settings]")
 {
     Settings dut;
-    REQUIRE(dut.Stock.diameter == 20);
-    REQUIRE(dut.Stock.material == 3);
-    REQUIRE(dut.Stock.stickOut == 100);
+    REQUIRE(dut.Stock.diameter == 20.0);
+    REQUIRE(dut.Stock.material == 3.0);
+    REQUIRE(dut.Stock.stickOut == 100.0);
 }
 
-TEST_CASE("Materials Settings", "[fancy]")
+TEST_CASE("Materials Settings", "[settings]")
 {
     Settings dut;
     REQUIRE(dut.Stock.materials.count() == 10);     // there should be 10 different materials
-
 }
