@@ -20,9 +20,14 @@ TEST_CASE("default Stock Settings", "[settings]")
     REQUIRE(dut.Stock.stickOut == 100.0);
 }
 
-TEST_CASE("Materials Settings", "[settings]")
+SCENARIO("Materials Settings", "[settings]")
 {
-    Settings dut;
-    REQUIRE(dut.Stock.materials.count() == 10);     // there should be 10 different materials
-
+    GIVEN("An existing Material settings_DB"){
+        WHEN("An the object is instantiated"){
+            Settings dut;
+            THEN("There should be 10 materials"){
+                REQUIRE(dut.Stock.materials.count() == 10);     // there should be 10 different materials
+            }
+        }
+    }
 }
